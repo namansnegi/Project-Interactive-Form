@@ -320,16 +320,19 @@ Form.addEventListener('submit', (e) => {
     if (!activitiesValid()) {
         e.preventDefault();
     };
-    if (!creditCardValid() && creditCardSelected === true) {
+    if (creditCardSelected === true){
+
+      if (!creditCardValid()) {
         e.preventDefault();
     };
-    if (!zipCodeValid() && creditCardSelected === true) {
+      if (!zipCodeValid()) {
         e.preventDefault();
     };
-    if (!cvvValid() && creditCardSelected === true) {
+      if (!cvvValid()) {
         e.preventDefault();
     };
 
+    };
 })
 
 
