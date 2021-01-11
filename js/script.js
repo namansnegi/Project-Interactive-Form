@@ -142,7 +142,8 @@ const bitcoin = document.getElementById('bitcoin');
 paypal.hidden = true;
 bitcoin.hidden = true;
 
-paymentMethod.children[1].setAttribute('selected', ''); 
+paymentMethod.children[1].setAttribute('selected', '');
+let creditCardSelected = true; 
 
 paymentMethod.addEventListener('change', (e) => {
   value = e.target.value;
@@ -156,15 +157,17 @@ paymentMethod.addEventListener('change', (e) => {
     creditCard.hidden = true;
     paypal.hidden = false;
     bitcoin.hidden = true;
+    creditCardSelected = false;
 
   }else {
     creditCard.hidden = true;
     paypal.hidden = true;
     bitcoin.hidden = false;
+    creditCardSelected = false;
   }
 })
 
-let creditCardSelected = true;
+
 // Select document elements for returning error messages if required
 const Form = document.getElementsByTagName('form')[0]
 const email = document.getElementById('email');
