@@ -28,10 +28,9 @@ The aim of the project is to add useful interactivity to a web form to make form
 - [X] Form submission uses the submit event on the form element.
 
 - [X] Form cannot be submitted (the page does not refresh when the submit button is clicked) until the following requirements have been met:
-- Name field can't be empty
-- Email field must be a validly formatted e-mail address (you don't have to check that it's a real e-mail address, just that it's formatted like one: dave@teamtreehouse.com for example. You'll need to use a regular expression to get this requirement. See the list of Resources for links to learn about regular expressions.
-- At least one activity must be checked from the list under "Register for Actitivities."
-- Payment option must be selected.
-- If "Credit card" is the selected payment option, make sure the user supplied a credit card number, a zip code, and a 3 number CVV value.
+- "Name" field isn’t blank.
+- "Email" field contains a correctly formatted email address (like namansnegi@hotmail.com).
+- At least one activity has been selected.
+- If "Credit Card" is the selected payment option, the three credit card fields accept only numbers: a 13 to 16-digit credit card number, a 5-digit zip code, and 3-digit CVV value.
 
 - [X] When all the required fields are filled out correctly, the form submits (the page refreshes on its own when the submit button is clicked).
